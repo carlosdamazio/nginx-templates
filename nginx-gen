@@ -1,0 +1,6 @@
+#!/usr/bin/python3
+
+from nginx_generator import nginx_template_generator
+
+
+nginx_template_generator.run()
