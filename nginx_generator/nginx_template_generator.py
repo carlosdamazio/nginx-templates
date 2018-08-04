@@ -18,4 +18,5 @@ def run():
     else:
         c = Commander(args, desired_path, PATH_TEMPLATES)
 
-    c.prepare_execution()
+    result_value, result_dest_file = c.execute()
+    print("Template generated at: {}".format(result_dest_file))

@@ -14,8 +14,10 @@ def parse_args():
         default='default-server'
     )
     parser.add_argument('--nodes', dest='nodes', nargs='+')
-    parser.add_argument('--sslcert', dest='sslcert_path')
-    parser.add_argument('--sslkey', dest='sslkey_path')
+    parser.add_argument('--sslcert', dest='sslcert')
+    parser.add_argument('--sslkey', dest='sslkey')
+    parser.add_argument('--root', dest='root')
 
     args = parser.parse_args()
+    args.root = args.root.replace("/", "\\/")
     return args
