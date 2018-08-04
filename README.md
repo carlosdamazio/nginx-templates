@@ -1,5 +1,5 @@
 # nginx-templates
-This is a python program to create Nginx templates with a few edits.
+This is a Python program to create Nginx templates with a few edits.
 
 ## Usage
 1. Clone this repo in a place as will.
