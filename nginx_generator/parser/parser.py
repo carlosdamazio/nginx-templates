@@ -20,4 +20,6 @@ def parse_args():
 
     args = parser.parse_args()
     args.root = args.root.replace("/", "\\/")
+    args.sslcert = args.sslcert.replace("/", "\\/") if args.sslcert else None
+    args.sslkey = args.sslkey.replace("/", "\\/") if args.sslkey else None
     return args
