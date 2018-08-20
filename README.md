@@ -11,8 +11,8 @@ nginx-gen [-h] -t TYPE [--server-name SERVER]
 
 3. Available types are:
 - Load Balancer: LB (coming soon)
-- Simple server without SSL
-- Simple server with SSL
+- Simple server without SSL: SRVNOSSL
+- Simple server with SSL: SRVSSL
 
 4. To use this program globally, just make a soft link in /usr/bin/ to the executable:
 ln -s /path/to/executable /usr/bin/nginx-gen
