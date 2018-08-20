@@ -1,4 +1,5 @@
-import subprocess
+import os
+import subprocess, shlex
 
 from nginx_generator.decorator.permission import permission
 
@@ -24,7 +25,21 @@ class Commander(object):
 
     @permission
     def execute_lb(self):
-        pass
+        target = self.template_path + 'load_balancer_https/' + self.FILE
+        target_regex = '"nodes"'
+        nodes = '\n    '.join(self.args.nodes)
+
+        subprocess.run(['cp', target, self.cpdest])
+
+        for key in self.args.__dict__.keys():
+            if key == 'nodes':
+                pass
+            else:
+                subprocess.run(['sed', '-i', 's/"{}"/{}/g'.format(
+                    key, self.args.__dict__[key]
+                ), self.cpdest +'/'+self.FILE])
+
+        return True, self.cpdest+'/'+self.FILE
 
     @permission
     def execute_srvnossl(self):

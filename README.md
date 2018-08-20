@@ -17,7 +17,6 @@ nginx-gen [-h] -t TYPE [--server-name SERVER]
 4. To use this program globally, just make a soft link in /usr/bin/ to the executable:
 ln -s /path/to/executable /usr/bin/nginx-gen
 
-
 ## To be done
 - Load Balancer support
 - Packaging to PyPi
