@@ -12,14 +12,13 @@ nginx-gen [-h] -t TYPE [--server-name SERVER]
 3. Available types are:
 - Load Balancer: LB (coming soon)
 - Simple server without SSL
-- Simple server with SSL (coming soon)
+- Simple server with SSL
 
-4. To use this program, just make a soft link in /usr/bin/ to the executable:
+4. To use this program globally, just make a soft link in /usr/bin/ to the executable:
 ln -s /path/to/executable /usr/bin/nginx-gen
 
 
 ## To be done
 - Load Balancer support
-- Simple server with SSL
 - Packaging to PyPi
 - Packaging to APT and other Pkg management systems
