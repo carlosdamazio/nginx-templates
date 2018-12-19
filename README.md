@@ -10,7 +10,7 @@ nginx-gen [-h] -t TYPE [--server-name SERVER]
                  [--sslkey SSLKEY] [--root ROOT]
 
 3. Available types are:
-- Load Balancer: LB (coming soon)
+- Load Balancer: LB
 - Simple server without SSL: SRVNOSSL
 - Simple server with SSL: SRVSSL
 
@@ -18,6 +18,5 @@ nginx-gen [-h] -t TYPE [--server-name SERVER]
 ln -s /path/to/executable /usr/bin/nginx-gen
 
 ## To be done
-- Load Balancer support
-- Packaging to PyPi
-- Packaging to APT and other Pkg management systems
+- Packaging!
+- Maybe I'll try to integrate with Let's Encrypt certbot, idk
