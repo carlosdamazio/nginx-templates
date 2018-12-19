@@ -21,19 +21,20 @@ class Commander(object):
         and self.args.sslkey and self.args.server:
             return self.execute_srvssl()
 
-        return None
+        return None, ""
 
     @permission
     def execute_lb(self):
         target = self.template_path + 'load_balancer_https/' + self.FILE
-        target_regex = '"nodes"'
-        nodes = '\n    '.join(self.args.nodes)
+        nodes = '\\n    '.join(self.args.nodes)
 
         subprocess.run(['cp', target, self.cpdest])
 
         for key in self.args.__dict__.keys():
             if key == 'nodes':
-                pass
+                subprocess.run(['sed', '-i', 's/"{}"/{}/g'.format(
+                    key, nodes
+                ), self.cpdest +'/'+self.FILE])
             else:
                 subprocess.run(['sed', '-i', 's/"{}"/{}/g'.format(
                     key, self.args.__dict__[key]
