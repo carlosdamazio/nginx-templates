@@ -4,11 +4,11 @@ This is a Python program to create Nginx templates with a few edits.
 ## Usage
 1. Clone this repo in a place as will.
 2. Usage is like this:
-
+```bash
 nginx-gen [-h] -t TYPE [--server-name SERVER]
                  [--nodes NODES [NODES ...]] [--sslcert SSLCERT]
                  [--sslkey SSLKEY] [--root ROOT]
-
+```
 3. Available types are:
 - Load Balancer: LB
 - Simple server without SSL: SRVNOSSL
